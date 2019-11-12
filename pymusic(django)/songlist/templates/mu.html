@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .list{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .list::after{
+            content: '.';
+            display: block;
+            clear: both;
+            font-size: 0;
+        }
+        .list li {
+            width: 23%;
+            margin: 0 1%;
+            float: left;
+            background-color: red;
+            height: 50px;
+        }
+        .list_title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: normal;
+            font-size: 1.2rem;
+            color: black;
+        }
+        .list_artic{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: normal;
+            font-size: 1rem;
+            color: #999999;
+        }
+
+        .list img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+    function checkAll() {
+        $.ajax({
+            url:'{% url "songList" %}',
+            data:'',
+            dataType:'json',
+            success:function (res) {
+                console.log(res);
+                index=0;
+                for (var i=0;i<res.length;i++){
+                    var infor = res[i];
+                    var mark = $(`
+                    <a href="#">
+                        <img src="${infor.songlist_img}" alt="">
+                        <p class="list_title">${infor.songlist_title}</p>
+                        <p class="list_artic">${infor.songlist_artic}</p>
+                    </a>
+    `);
+
+                    $('.list li').eq(index).append(mark);
+                    index++;
+                    if (index==4){
+                        index=0;
+                    }
+                }
+            }
+        })
+    }
+    checkAll()
+</script>
+</html>

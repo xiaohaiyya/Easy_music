@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>测试页面</title>
+    </head>
+    <body>
+        这是测试页面
+        aaaa
+    </body>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        data = {};
+        $.ajax({
+            url: 'http://127.0.0.1:8000/singer/artist/cat/api/?kind='+'华语男歌手',
+            type: 'get',
+            data: data,
+            dataType: 'json',
+            success: function (res) {
+                console.log(res);
+            }
+        })
+    </script>
+</html>

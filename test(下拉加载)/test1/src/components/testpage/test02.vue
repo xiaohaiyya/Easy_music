@@ -1,0 +1,163 @@
+<template>
+    <ul class="infinite-list" 
+    v-infinite-scroll="load"
+    infinite-scroll-immediate=true
+    style="overflow:auto">
+    <!-- <li v-for="(i,j) in list" :key="j" class="infinite-list-item">{{ i }}</li> -->
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    <p>bbbb</p>
+    <p>aaaa</p>
+    </ul>
+</template>
+
+<script>
+    export default {
+        data () {
+            return {
+                list:[], //歌单列表
+                isLoading:false, //默认是要响应上滑动作的
+                pageindex:1,
+                pagesize:18,
+            }
+        },
+        methods: {
+            load () {
+                this.isLoading=true
+                console.log(111)
+            }
+        }
+    }
+</script>
+<style>
+p{
+    height:50px;
+    line-height:50px;
+    background-color: aqua;
+    margin-top:10px;
+}
+</style>
